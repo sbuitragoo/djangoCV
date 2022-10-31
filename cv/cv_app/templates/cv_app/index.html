@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="background-color: gray">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+    <div class="banner">
+        <h1>Welcome</h1>
+        <hr>
+    </div>
+    <div style="height: 200px; position: relative;">
+        <h2 class="typeName">Please type your name</h2>
+        <form action="{% url 'cv_app:menu' %}" method="post">
+            {% csrf_token %}
+            <input type="text" required class="input" name="name">
+            <button class="submit">Continue</button>
+        </form> 
+    </div>
+
+</html>

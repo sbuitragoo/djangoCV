@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="background-color: gray">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+    <div class="banner">
+        <h1>Welcome to my Virtual CV</h1>
+        <hr>
+    </div>
+    <div style="align-content: center">
+
+        <h2 style="text-align: center; color: white;">Hello {{ name }}! Bellow you can select which features of my CV you want to see:</h2>
+        
+        <form action="{% url 'cv_app:complete_cv' %}" method="get">
+            {% csrf_token %}
+            <button class="buttons">Complete CV</button>
+        </form>
+        <form action="{% url 'cv_app:personal_info' %}" method="get">
+            {% csrf_token %}
+            <button class="buttons">Personal Information</button>
+        </form>
+        <form action="{% url 'cv_app:studies' %}" method="get">
+            {% csrf_token %}
+            <button class="buttons">Studies</button>
+        </form>
+        <form action="{% url 'cv_app:work_experience' %}" method="get">
+            {% csrf_token %}
+            <button class="buttons">Work Experience</button>
+        </form>
+        <form action="{% url 'cv_app:additional_info' %}" method="get">
+            <button class="buttons">Additional Information</button>
+        </form>
+        
+    </div>
+
+</html>
