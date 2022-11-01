@@ -7,11 +7,32 @@ class Person(models.Model):
     location = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     birth_date = models.DateField()
+    
+    def get_id(self):
+        return self.id
+    
+    def get_name(self):
+        return self.name
+    
+    def get_age(self):
+        return self.age
+    
+    def get_phone(self):
+        return self.phone
+    
+    def get_birth_date(self):
+        return self.birth_date
 
 class Career(models.Model):
     # id = models.Index(name='Career')
     title_name = models.CharField(max_length=50)
     duration = models.CharField(max_length=5)
+
+    def get_title(self):
+        return self.title_name
+    
+    def get_duration(self):
+        return self.duration
     
 
 class University(models.Model):
