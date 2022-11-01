@@ -1,14 +1,55 @@
 {% load static %}
 <!DOCTYPE html>
-<html style="background-color: gray">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
-    <div class="banner">
-        <h1>Personal Information</h1>
-        <hr>
-    </div>
-    <div style="align-content: center">
-        <d>Name: Santiago Buitrago Osorio</d>
-        <d>Name: Santiago Buitrago Osorio</d>
-    </div>
-
+<html>
+    <title>My CV</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column left" style="background-color: gray;">
+                <img src="{% static 'images/photo.jpg' %}" width="250" height="300" class="center" alt="Profile Image">
+            </div>
+            <div class="column right">
+                <h1 class="title_h1">Personal Information</h1>
+                <h2 class="name_h2">Santiago Buitrago Osorio</h2>
+                <h3 class="career_h3">Electronic Engineer</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column left" style="background-color: gray;">
+                <div style="margin-left: 1%; margin-top: 10%;">
+                    <a href="https://github.com/sbuitragoo" target="_blank"><img src="{% static 'images/GitHub-logo.png' %}" width="50" height="30" alt="github logo" class="center_logo"></a>
+                    <a href="https://linkedin.com/in/sbuitragoo" target="_blank"><img src="{% static 'images/linkedin-logo.png' %}" width="50" height="35" alt="linkedinlogo" class="center_logo"></a>
+                </div>
+            </div>
+            <div class="column right">
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Description:</d>
+                    <d class="personal_d">Electronic Engineer from Universidad Nacional de Colombia with coding experience with Python, Java and Javascript</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Gender:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Birth Date:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Age:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Living place:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Hobbies:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Languages:</d>
+                </div>
+                <div style="margin-top: 1%;">
+                    <d class="personal_d">Interests:</d>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

@@ -44,3 +44,64 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.personalInfoBanner {
+    background-color: gray;
+    border-radius: 100;
+    text-align: center;
+    font-size: larger;
+    color: wite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.column {
+    float: left;
+}
+
+/* Set width length for the left, right and middle columns */
+.left {
+    width: 25%;
+}
+
+.middle {
+    width: 30%;
+}
+
+.right {
+    width: 75%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title_h1 {
+    text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 50pt;
+}
+
+.name_h2 {
+    text-align: left; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 3%; font-size: 30pt;
+}
+
+.career_h3 {
+    text-align: left; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 3%; font-size: 18pt;color: gray;
+}
+
+.center_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.personal_d {
+    text-align: left; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 3%;
+}
