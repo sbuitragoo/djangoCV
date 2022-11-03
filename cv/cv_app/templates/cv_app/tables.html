@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <title>My CV</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column left" style="text-align: center;">
+                <!-- Person Table -->
+                <h2 style="text-align: center;">Person</h2>
+                <section>
+                    <h3>ID:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table_id">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Name:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table_name">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Age:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table_age">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Location:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table_location">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Phone:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table__phone">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Birth Date:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="person_table_birth">
+                    </form>    
+                </section>
+                <!-- Company Table -->
+                <h2 style="text-align: center;">Company</h2>
+                <section>
+                    <h3>Company Name:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="company_table_name">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Location:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="company_table_location">
+                    </form>    
+                </section>
+                <button style="margin-top: 3%;">Save</button>
+            </div>
+            <div class="column middle" style="text-align: center;">
+                <!-- Career Table -->
+                <h2 style="text-align: center;">Careers</h2>
+                <section>
+                    <h3>Title Name:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="career_table_name">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Duration:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="career_table_duration">
+                    </form>    
+                </section>
+                <!-- University Table -->
+                <h2 style="text-align: center;">Universities</h2>
+                <section>
+                    <h3>University Name:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="university_table_name">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Location:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="university_table_location">
+                    </form>    
+                </section>
+                <!-- Languages Table -->
+                <h2 style="text-align: center;">Languages</h2>
+                <section>
+                    <h3>Language:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="language_table_language">
+                    </form>    
+                </section>
+                <section>
+                    <h3>Level:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <select name="language_level">
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="B2">C1</option>
+                          </select>
+                    </form>    
+                </section>
+                <!-- Social Media Table -->
+                <h2 style="text-align: center;">Social Media</h2>
+                <section>
+                    <h3>Media:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <select name="media">
+                            <option value="Linkedin">Linkedin</option>
+                            <option value="GitHub">Github</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Twitter">Twitter</option>
+                          </select>
+                    </form>    
+                </section>
+                <section>
+                    <h3>Username:</h3> 
+                    <form action="{% url 'cv_app:menu' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" required class="table_input" name="media_table_user">
+                    </form>    
+                </section>
+                <button style="margin-top: 3%;">Save</button>
+            </div>
+        </div> 
+    </body>
+</html>

@@ -40,3 +40,7 @@ def work_experience(request):
 def additional_info(request):
     template = loader.get_template('cv_app/additional_info.html')
     return HttpResponse(template.render({}, request))
+
+def db_filling(request):
+    template = loader.get_template('cv_app/tables.html')
+    return HttpResponse(template.render({}, request))

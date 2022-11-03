@@ -12,6 +12,7 @@ urlpatterns = [
     path('studies', views.studies, name='studies'),
     path('work/experience', views.work_experience, name='work_experience'),
     path('info/additional', views.additional_info, name='additional_info'),
+    path('db/fill', views.db_filling, name='db_filling'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
